@@ -16,10 +16,10 @@
 A website for women to be encouraged to read and join in discussions of literature to broaden their scope of knowledge. 
 It gives users a personalised experience and caters to all kinds of readers depending on their personality.
 
-### The Problem (that doesn't exist)
+### The Problem
 Lack of readership
 
-### The Solution (that nobody asked for)
+### The Solution 
 To be able to engage in community and forums to facilitate discussions on the books people have read.
 
 ## Technical Details
