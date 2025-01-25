@@ -56,9 +56,6 @@ https://drive.google.com/drive/folders/1_LIgD_gPzavbiJcV6F93dx1iRiEP5iak?usp=sha
 
 Video to Demonstrate the website
 
-# Additional Demos
-[Add any extra demo materials/links]
-
 ## Team Contributions
 - Meenakshi Rajesh: Coding
 - Devapriya K.S: Design and features
