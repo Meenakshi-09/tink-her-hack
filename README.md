@@ -36,7 +36,7 @@ For Software: CSS, JavaScript, HTML
 ### Project Documentation
 For Software: VS Code
 
-# Screenshots (Add at least 3)
+# Screenshots
 ![image](https://github.com/user-attachments/assets/125f3f4a-15c7-489c-b812-0280804d885e)
 Image 1: Home Screen of the Website
 
