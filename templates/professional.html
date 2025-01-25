@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Women - Book Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ user_name }}!</h1>
+        <p>Discover Books Tailored for Professional Women</p>
+    </header>
+
+    <main>
+        <!-- Personalized Recommendations -->
+        <section class="recommendations">
+            <h2>Your Personalized Book List</h2>
+            {% if recommended_books %}
+                <ul>
+                    {% for book in recommended_books %}
+                        <li>{{ book }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No recommendations yet. Select your favorite genres in your profile!</p>
+            {% endif %}
+        </section>
+
+        <!-- Featured Books for Professional Women -->
+        <section class="featured">
+            <h2>📚 Top Picks for Professional Women</h2>
+            <ul>
+                <li><strong>"Lean In"</strong> – Sheryl Sandberg's guide to leadership and career success.</li>
+                <li><strong>"Atomic Habits"</strong> – A powerful book on building productive habits.</li>
+                <li><strong>"The Defining Decade"</strong> – A must-read for career and life decisions in your 20s & 30s.</li>
+                <li><strong>"Dare to Lead"</strong> – Brené Brown's insights on leadership and courage.</li>
+                <li><strong>"Big Magic"</strong> – Creativity and inspiration for professionals balancing work and passion.</li>
+            </ul>
+        </section>
+
+        <!-- Forum Section -->
+        <section>
+            <h2>💬 Join the Professional Women's Book Club</h2>
+            <p>Network with like-minded professionals and discuss books on career growth, leadership, and success.</p>
+            <a href="{{ url_for('forum_professional') }}">Go to Forum</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>

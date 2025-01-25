@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Create an Account</h1>
+    </header>
+
+    <main>
+        <section class="register-container">
+            <form action="{{ url_for('register') }}" method="post">
+                <label for="name">Full Name</label>
+                <input type="text" name="name" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+
+                <label for="password">Password</label>
+                <input type="password" name="password" required>
+
+                <label>Select Your Favorite Genres:</label>
+                <input type="checkbox" name="genres" value="romance"> Romance
+                <input type="checkbox" name="genres" value="drama"> Drama
+                <input type="checkbox" name="genres" value="fantasy"> Fantasy
+                <input type="checkbox" name="genres" value="crime"> Crime
+                <input type="checkbox" name="genres" value="thriller"> Thriller
+                <input type="checkbox" name="genres" value="historical"> Historical
+                <input type="checkbox" name="genres" value="old_literature"> Old Literature
+                <input type="checkbox" name="genres" value="adventure"> Adventure
+                <input type="checkbox" name="genres" value="comedy"> Comedy
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Women's Book Recommendation Platform</p>
+    </footer>
+</body>
+</html>

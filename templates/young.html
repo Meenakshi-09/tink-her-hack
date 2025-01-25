@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Adults - Book Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ user_name }}!</h1>
+        <p>Explore Books Perfect for Young Adults</p>
+    </header>
+
+    <main>
+        <!-- Personalized Recommendations -->
+        <section class="recommendations">
+            <h2>Your Personalized Book List</h2>
+            {% if recommended_books %}
+                <ul>
+                    {% for book in recommended_books %}
+                        <li>{{ book }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No recommendations yet. Select your favorite genres in your profile!</p>
+            {% endif %}
+        </section>
+
+        <!-- Featured Books for Young Adults -->
+        <section class="featured">
+            <h2>📚 Top Picks for Young Adults</h2>
+            <ul>
+                <li><strong>"The Fault in Our Stars"</strong> – A heartwarming love story.</li>
+                <li><strong>"Harry Potter Series"</strong> – A magical adventure that never gets old.</li>
+                <li><strong>"The Hunger Games"</strong> – A thrilling dystopian adventure.</li>
+                <li><strong>"To All the Boys I've Loved Before"</strong> – A fun and romantic teen novel.</li>
+                <li><strong>"The Perks of Being a Wallflower"</strong> – A relatable coming-of-age story.</li>
+            </ul>
+        </section>
+
+        <!-- Forum Section -->
+        <section>
+            <h2>💬 Join the Young Adults' Book Club</h2>
+            <p>Discuss books, share recommendations, and connect with other young readers.</p>
+            <a href="{{ url_for('forum_young_adults') }}">Go to Forum</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>

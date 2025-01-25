@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Your Personalized Book Recommendations</h1>
+    </header>
+
+    <main>
+        <section class="recommendations">
+            <h2>Based on your personality, we recommend:</h2>
+            <ul>
+                {% for book in books %}
+                    <li>{{ book }}</li>
+                {% endfor %}
+            </ul>
+            <a href="/" class="btn">Back to Home</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personality Quiz</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Find Your Perfect Book!</h1>
+    </header>
+
+    <main>
+        <section class="quiz-container">
+            <h2>Personality-Based Book Quiz</h2>
+            <p>Answer the questions below to receive personalized book recommendations.</p>
+
+            <form id="quizForm" action="{{ url_for('quiz') }}" method="post">
+                <label>1. How do you prefer to spend your free time?</label>
+                <input type="radio" name="q1" value="adventurous"> Exploring new places<br>
+                <input type="radio" name="q1" value="analytical"> Reading or solving puzzles<br>
+                <input type="radio" name="q1" value="romantic"> Watching romantic movies<br>
+                <input type="radio" name="q1" value="mysterious"> Solving mysteries or detective stories<br>
+
+                <label>2. Which statement best describes you?</label>
+                <input type="radio" name="q2" value="adventurous"> I love excitement and surprises.<br>
+                <input type="radio" name="q2" value="analytical"> I enjoy deep thinking and analyzing situations.<br>
+                <input type="radio" name="q2" value="romantic"> I am emotional and enjoy heartfelt stories.<br>
+                <input type="radio" name="q2" value="mysterious"> I like uncovering secrets and solving puzzles.<br>
+
+                <label>3. If you could visit any fictional world, where would you go?</label>
+                <input type="radio" name="q3" value="adventurous"> A magical kingdom full of adventure.<br>
+                <input type="radio" name="q3" value="analytical"> A futuristic world with advanced technology.<br>
+                <input type="radio" name="q3" value="romantic"> A peaceful village with charming love stories.<br>
+                <input type="radio" name="q3" value="mysterious"> A dark city with thrilling mysteries.<br>
+
+                <button type="submit" class="btn">Get My Book Recommendations</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>

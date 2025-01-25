@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ user_name }}!</h1>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <h2>Your Personalized Book Dashboard</h2>
+
+            <div class="dashboard-sections">
+                <!-- Book Recommendations -->
+                <div class="dashboard-box">
+                    <h3>📚 Recommended Books</h3>
+                    <ul>
+                        {% for book in recommended_books %}
+                            <li>{{ book }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Reading Progress -->
+                <div class="dashboard-box">
+                    <h3>📖 Your Reading Progress</h3>
+                    <p>Books Completed: {{ books_completed }}</p>
+                    <p>Books in Progress: {{ books_in_progress }}</p>
+                    <a href="{{ url_for('track_progress') }}" class="btn">Update Progress</a>
+                </div>
+
+                <!-- Community Forum -->
+                <div class="dashboard-box">
+                    <h3>💬 Join the Community</h3>
+                    <a href="{{ url_for('forum') }}" class="btn">Go to Forum</a>
+                </div>
+
+                <!-- Genre Selection -->
+                <div class="dashboard-box">
+                    <h3>🎲 Discover New Books</h3>
+                    <a href="{{ url_for('dice_roll') }}" class="btn">Roll the Dice</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Women's Book Recommendation Platform</p>
+    </footer>
+</body>
+</html>

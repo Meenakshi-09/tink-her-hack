@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dice Roll Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Dice Roll Result</h1>
+    <h2>Selected Genre: {{ genre }}</h2>
+
+    <h3>Recommended Books:</h3>
+    <ul>
+        {% for book in books %}
+            <li>{{ book }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="/">Go Back to Homepage</a> | <a href="/roll_dice">Roll Again</a>
+</body>
+</html>

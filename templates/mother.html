@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mothers - Book Recommendations</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome, {{ user_name }}!</h1>
+        <p>Discover Books Perfect for Mothers</p>
+    </header>
+
+    <main>
+        <!-- Personalized Recommendations -->
+        <section class="recommendations">
+            <h2>Your Personalized Book List</h2>
+            {% if recommended_books %}
+                <ul>
+                    {% for book in recommended_books %}
+                        <li>{{ book }}</li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>No recommendations yet. Select your favorite genres in your profile!</p>
+            {% endif %}
+        </section>
+
+        <!-- Featured Books for Mothers -->
+        <section class="featured">
+            <h2>📚 Featured Books for Mothers</h2>
+            <ul>
+                <li><strong>"The Light We Lost"</strong> – A touching romance about love and fate.</li>
+                <li><strong>"Little Women"</strong> – A heartwarming classic about sisterhood and family.</li>
+                <li><strong>"The Nightingale"</strong> – A gripping historical novel about resilience.</li>
+                <li><strong>"The Whole-Brain Child"</strong> – A guide to parenting with psychology-backed strategies.</li>
+                <li><strong>"Present Over Perfect"</strong> – A motivational book for moms seeking balance.</li>
+            </ul>
+        </section>
+
+        <!-- Forum Section -->
+        <section>
+            <h2>💬 Join the Mothers' Book Club</h2>
+            <p>Discuss books, parenting, and self-care with like-minded mothers.</p>
+            <a href="{{ url_for('forum_mothers') }}">Go to Forum</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>

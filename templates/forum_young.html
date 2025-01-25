@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Young Adults Forum</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Young Adults' Book Forum</h1>
+        <p>Discuss books, share thoughts, and connect with other young readers.</p>
+    </header>
+
+    <main>
+        <section class="forum">
+            <h2>📢 Discussion Board</h2>
+            <ul>
+                {% for post in forum_posts %}
+                    <li><strong>{{ post.author }}</strong>: {{ post.content }}</li>
+                {% endfor %}
+            </ul>
+        </section>
+
+        <!-- Add a new post -->
+        <section class="new-post">
+            <h2>📝 Start a Discussion</h2>
+            <form action="{{ url_for('post_to_forum_young_adults') }}" method="post">
+                <textarea name="content" placeholder="Write your thoughts..." required></textarea>
+                <button type="submit">Post</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Book Recommendation Website</p>
+    </footer>
+</body>
+</html>
